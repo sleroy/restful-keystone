@@ -571,5 +571,5 @@ MIT © [woflow](https://github.com/WofloW)
 [npm-image]: https://badge.fury.io/js/restful-keystone-onode.svg
 [travis-url]: https://travis-ci.org/d-pac/restful-keystone-onode
 [travis-image]: https://travis-ci.org/onode/restful-keystone-onode.svg?branch=master
-[daviddm-url]: https://david-dm.org/d-pac/restful-keystone.svg?theme=shields.io
-[daviddm-image]: https://david-dm.org/d-pac/restful-keystone
+[daviddm-url]: https://david-dm.org/onode/restful-keystone-onode.svg.svg?theme=shields.io
+[daviddm-image]: https://david-dm.org/onode/restful-keystone-onode.svg

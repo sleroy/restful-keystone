@@ -46,7 +46,7 @@
   "scripts": {
     "test": "grunt",
     "install": "peerdep",
-    "install-release": "npm install npm-release",
+    "install-release": "npm install -g npm-release",
     "release": "npm publish",
     "coverage": "nyc report",
     "coverage:upload": "npm run coverage -s -- --reporter=text-lcov | coveralls"
