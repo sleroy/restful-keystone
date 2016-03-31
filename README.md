@@ -15,7 +15,7 @@ It allows for very granular control of editable fields, population, filters and 
 ## Install
 
 ```sh
-$ npm install --save restful-keystone
+$ npm install --save restful-keystone-onode
 ```
 
 ## Usage
@@ -567,9 +567,9 @@ You need to set up any restrictions you want to see applied to routes yourself.
 MIT © [d-pac](http://www.d-pac.be)
 MIT © [woflow](https://github.com/WofloW)
 
-[npm-url]: https://npmjs.org/package/restful-keystone
-[npm-image]: https://badge.fury.io/js/restful-keystone.svg
-[travis-url]: https://travis-ci.org/d-pac/restful-keystone
-[travis-image]: https://travis-ci.org/d-pac/restful-keystone.svg?branch=master
+[npm-url]: https://npmjs.org/package/restful-keystone-onode
+[npm-image]: https://badge.fury.io/js/restful-keystone-onode.svg
+[travis-url]: https://travis-ci.org/d-pac/restful-keystone-onode
+[travis-image]: https://travis-ci.org/onode/restful-keystone-onode.svg?branch=master
 [daviddm-url]: https://david-dm.org/d-pac/restful-keystone.svg?theme=shields.io
 [daviddm-image]: https://david-dm.org/d-pac/restful-keystone

@@ -1,13 +1,13 @@
 {
-  "name": "restful-keystone-adv",
-  "version": "0.0.6",
+  "name": "restful-keystone-onode",
+  "version": "0.1.1",
   "description": "Automatic RESTful API enabler for KeystoneJS supporting pagination",
   "author": {
-    "name": "W-Fang",
-    "email": "lancefangw@gmail.com",
-    "url": "https://github.com/WofloW"
+    "name": "jjhesk",
+    "email": "jobhesk@gmail.com",
+    "url": "https://github.com/ONode"
   },
-  "repository": "WofloW/restful-keystone",
+  "repository": "ONode/restful-keystone",
   "license": "MIT",
   "files": [
     "index.js",
