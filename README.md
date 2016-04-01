@@ -77,7 +77,7 @@ Status: 200 OK
             "categories": [],
             "content": {
                 "brief": "<p>This is a test</p>",
-                "extended": "<p>To make sure restful-keystone is functioning correctly</p>"
+                "extended": "<p>To make sure restful-keystone-onode is functioning correctly</p>"
             },
             "state": "published"
         }
@@ -122,7 +122,7 @@ By default it will setup these routes:
 The module itself requires a `keystone` instance to be passed to it:
 
 ```js
-var restful = require("restful-keystone")(keystone);
+var restful = require("restful-keystone-onode")(keystone);
 ```
 
 However, you can declare the `root` of your api here as well:
@@ -146,7 +146,7 @@ restful.expose({
 });
 ```
 
-By default lists aren't exposed for security reasons, which is why you need to tell restful-keystone explicitly you want a list enabled in the REST API.
+By default lists aren't exposed for security reasons, which is why you need to tell restful-keystone-onode explicitly you want a list enabled in the REST API.
 You have to use the list name as the identifier, i.e. it's the value you passed to `keystone.list`, e.g.
 
 ```js
@@ -246,7 +246,7 @@ Status: 200 OK
 	    "categories": [],
 	    "content": {
 	        "brief": "<p>This is a test</p>",
-	        "extended": "<p>To make sure restful-keystone is functioning correctly</p>"
+	        "extended": "<p>To make sure restful-keystone-onode is functioning correctly</p>"
 	    },
 	    "state": "published"
 	}
@@ -301,7 +301,7 @@ Status: 200 OK
 	    "categories": [],
 	    "content": {
 	        "brief": "<p>This is a test</p>",
-	        "extended": "<p>To make sure restful-keystone is functioning correctly</p>"
+	        "extended": "<p>To make sure restful-keystone-onode is functioning correctly</p>"
 	    },
 	    "state": "published"
 	}
@@ -462,7 +462,7 @@ Will execute `requireAdmin` and `requireAllFields` for the "update" method.
 
 **`after` behaves identical to `before` except for one thing:**
 
-By default restful-keystone will send the response, but any method that receives `after` middleware will have to have additional middleware to send the response. This is to allow maximum flexibility, otherwise you wouldn't be able to manipulate the results before they're sent.
+By default restful-keystone-onode will send the response, but any method that receives `after` middleware will have to have additional middleware to send the response. This is to allow maximum flexibility, otherwise you wouldn't be able to manipulate the results before they're sent.
 
 ```js
 restful.expose({
@@ -479,7 +479,7 @@ As you can see the response and status code are stored in `res.locals`
 
 #### start
 
-This signals to restful-keystone that it should set up the routes et cetera. I.e. you're finished configuring.
+This signals to restful-keystone-onode that it should set up the routes et cetera. I.e. you're finished configuring.
 
 ```js
 restful.expose({
@@ -489,7 +489,7 @@ restful.expose({
         console.log("CREATED:", res.locals.body);
         res.send(res.locals.status, res.locals.body);
     }
-}).start(); // DO NOT FORGET TO START restful-keystone
+}).start(); // DO NOT FORGET TO START restful-keystone-onode
 ```
 
 A `start` method was added to allow you to configure restful in any order you see fit, i.e. this is all possible:
@@ -563,11 +563,11 @@ Status: 200 OK
 
 All requests respond with a `200 OK` status if the request was succesful, except for `remove` requests which will return `204 No Content`.
 
-When something goes wrong appropriate errors are thrown, however restful-keystone does not provide any error handling out of the box, i.e. you need to make sure you have some kind of error handling middleware in place.
+When something goes wrong appropriate errors are thrown, however restful-keystone-onode does not provide any error handling out of the box, i.e. you need to make sure you have some kind of error handling middleware in place.
 
 ### Permissions
 
-restful-keystone does **NOT** provide any security checks, i.e. if you expose a resource it is available to anonymous requests !!
+restful-keystone-onode does **NOT** provide any security checks, i.e. if you expose a resource it is available to anonymous requests !!
 You need to set up any restrictions you want to see applied to routes yourself.
 
 ## Roadmap
