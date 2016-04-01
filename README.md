@@ -11,6 +11,7 @@ It allows for very granular control of editable fields, population, filters and 
 * Granular control/configuration
 * Route configuration by keystone list, instead of path
 * Versatile API
+* Pagination for listing API
 
 ## Install
 
@@ -31,7 +32,7 @@ Let's assume we've got an `Article` list set up in `models`. We only need a few 
 var keystone = require('keystone');
 
 // Pass your keystone instance to the module
-var restful = require('restful-keystone')(keystone);
+var restful = require('restful-keystone-onode')(keystone);
 
 // ...
 
@@ -84,6 +85,27 @@ Status: 200 OK
 }
 ```
 
+
+The new api will provide pagination format that you can query by page.
+```sh
+
+Status: 200 OK
+{
+    "articles":{
+        "total": 2,
+        "results":[{"_id": "56fa9f519eb739e01aec4f72", "key": "demo", "english": "demdem",…],
+        "currentPage": 1,
+        "totalPages": 1,
+        "pages":[1],
+        "previous": false,
+        "next": false,
+        "first": 1,
+        "last": 2
+    }
+}
+
+```
+
 By default it will setup these routes:
 
 * `GET /api/<collection>`: a **`list`** operation; returns all of the resources
@@ -106,7 +128,7 @@ var restful = require("restful-keystone")(keystone);
 However, you can declare the `root` of your api here as well:
 
 ```js
-var restful = require("restful-keystone")(keystone, {
+var restful = require("restful-keystone-onode")(keystone, {
     root: "/api/v1"
 });
 ```
@@ -555,7 +577,7 @@ You need to set up any restrictions you want to see applied to routes yourself.
 * Pagination
 
 ## Changelog
-
+* **v0.1.3 adding bug fixed for 4 of them
 * **v0.1** make compatible with Keystone v0.3 (i.e. express 4)
 * **v0.2**
     * API improvements
@@ -566,6 +588,7 @@ You need to set up any restrictions you want to see applied to routes yourself.
 
 MIT © [d-pac](http://www.d-pac.be)
 MIT © [woflow](https://github.com/WofloW)
+MIT © [ONode](https://github.com/Onode)
 
 [npm-url]: https://npmjs.org/package/restful-keystone-onode
 [npm-image]: https://badge.fury.io/js/restful-keystone-onode.svg
