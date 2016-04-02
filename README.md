@@ -577,7 +577,8 @@ You need to set up any restrictions you want to see applied to routes yourself.
 * Pagination
 
 ## Changelog
-* **v0.1.3 adding bug fixed for 4 of them
+* **v0.1.5** fixed the id issue on the body
+* **v0.1.3** adding bug fixed for 4 of them
 * **v0.1** make compatible with Keystone v0.3 (i.e. express 4)
 * **v0.2**
     * API improvements
