@@ -333,15 +333,15 @@ Will only operate on Article documents that have a `"published"` value in `"stat
 **{Boolean|String|String[]}** default: `false`
 
 Allows automatic population of relationship fields.
-Please also refer to [mongoose document](http://mongoosejs.com/docs/3.7.x/docs/api.html#query_Query-populate) to configure it out with different types of implementation.
-
 ```js
 restful.expose({
     Article : {
     	populate : "author"
     }
 });
+
 ```
+
 
 ```sh
 GET /api/articles/54e2f411a21780d7a097ce8e
@@ -367,6 +367,21 @@ Status: 200 OK
     }
 }
 ```
+
+##### `populateAdv` a simple way to populate the whole object
+
+Please also refer to [mongoose document](http://mongoosejs.com/docs/3.7.x/docs/api.html#query_Query-populate) to configure it out with different types of implementation.
+
+```js
+restful.expose({
+    Article : {
+    	populateAdv : {
+
+    	}
+    }
+});
+```
+
 
 
 
