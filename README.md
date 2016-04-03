@@ -211,6 +211,18 @@ restful.expose({
     }
 });
 ```
+##### `listShow`
+
+The item(s) will be shown in the list api request.
+
+```js
+restful.expose({
+    Article : {
+    	listShow : "title content"
+    }
+});
+```
+
 
 ##### `edit`
 
