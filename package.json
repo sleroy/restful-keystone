@@ -1,6 +1,6 @@
 {
   "name": "restful-keystone-onode",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Automatic RESTful API enabler for KeystoneJS supporting pagination",
   "author": {
     "name": "jjhesk",
@@ -28,7 +28,8 @@
     "bluebird": "^2.9.9",
     "require-directory": "^2.0.0",
     "node-constants": "0.0.2",
-    "deepmerge": "^0.2.7"
+    "deepmerge": "^0.2.7",
+    "mongoose-deep-populate":"^3.0.0"
   },
   "devDependencies": {
     "grunt-cli": "^0.1.13",

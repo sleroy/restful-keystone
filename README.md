@@ -328,11 +328,12 @@ restful.expose({
 
 Will only operate on Article documents that have a `"published"` value in `"state"`.
 
-##### `populate`
+##### `populate` a simple way to populate the whole object
 
 **{Boolean|String|String[]}** default: `false`
 
 Allows automatic population of relationship fields.
+Please also refer to [mongoose document](http://mongoosejs.com/docs/3.7.x/docs/api.html#query_Query-populate) to configure it out with different types of implementation.
 
 ```js
 restful.expose({
@@ -341,6 +342,7 @@ restful.expose({
     }
 });
 ```
+
 ```sh
 GET /api/articles/54e2f411a21780d7a097ce8e
 
@@ -365,6 +367,9 @@ Status: 200 OK
     }
 }
 ```
+
+
+
 
 ##### `path`
 
@@ -577,6 +582,7 @@ You need to set up any restrictions you want to see applied to routes yourself.
 * Pagination
 
 ## Changelog
+* **v0.2.0** adding populate specific field(s) from the object item
 * **v0.1.5** fixed the id issue on the body
 * **v0.1.3** adding bug fixed for 4 of them
 * **v0.1** make compatible with Keystone v0.3 (i.e. express 4)
@@ -589,7 +595,7 @@ You need to set up any restrictions you want to see applied to routes yourself.
 
 MIT © [d-pac](http://www.d-pac.be)
 MIT © [woflow](https://github.com/WofloW)
-MIT © [ONode](https://github.com/Onode)
+MIT © [ONode JRail](https://github.com/Onode)
 
 [npm-url]: https://npmjs.org/package/restful-keystone-onode
 [npm-image]: https://badge.fury.io/js/restful-keystone-onode.svg
