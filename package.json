@@ -24,7 +24,7 @@
     "peerdep": "^0.1.0",
     "lodash": "^3.2.0",
     "debug": "^2.1.1",
-    "errors": "^0.2.0",
+    "errors": "^0.3.0",
     "bluebird": "^2.9.9",
     "require-directory": "^2.0.0",
     "node-constants": "0.0.2",
